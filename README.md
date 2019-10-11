@@ -1,6 +1,6 @@
 # robofriends
 
-The app illustrates how state management is done using Redux. To get robot images and info I used JSONPlacholder and RoboHash APIs. You can search through the robot names by typing into the search field.
+The app illustrates how state management is done using Redux. To get robot images and info I used JSONPlacholder and RoboHash APIs.
 
 To run the project:
 
