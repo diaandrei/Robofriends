@@ -1,9 +1,10 @@
 {
   "name": "robofriends",
-  "homepage": "https://diaandrei.github.io/robofriends",
+  "homepage": "https://diaandrei.github.io/Robofriends",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",
