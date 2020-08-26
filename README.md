@@ -1,4 +1,4 @@
-# robofriends
+# Robofriends
 
 The app illustrates how state management is done using Redux. To get robot images and info I used JSONPlacholder and RoboHash APIs.
 
