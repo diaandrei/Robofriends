@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
@@ -8,20 +8,26 @@ import 'tachyons';
 
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
-import { requestRobots, searchRobots } from './reducers'
+import { requestRobots, searchRobots } from './reducers';
 
 import './index.css';
 
-const logger = createLogger()
+const logger = createLogger();
 
-const rootReducers = combineReducers({requestRobots, searchRobots})
+const rootReducers = combineReducers({ requestRobots, searchRobots });
 
-const store = createStore(rootReducers, applyMiddleware(thunkMiddleware, logger))
+const store = createStore(rootReducers, applyMiddleware(thunkMiddleware, logger));
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App/>
-  </Provider>,
-  document.getElementById('root')
-);
+const rootElement = document.getElementById('root');
+
+if (rootElement) {
+  createRoot(rootElement).render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+} else {
+  console.error('Could not find root element to mount the application.');
+}
+
 registerServiceWorker();
