@@ -1,7 +1,7 @@
 {
   "name": "robofriends",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://diaandrei.github.io/Robofriends",
   "dependencies": {
     "react": "^18.2.0",

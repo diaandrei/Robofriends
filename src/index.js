@@ -7,7 +7,6 @@ import { createLogger } from 'redux-logger';
 import 'tachyons';
 
 import App from './containers/App';
-import registerServiceWorker from './registerServiceWorker';
 import { requestRobots, searchRobots } from './reducers';
 
 import './index.css';
@@ -29,5 +28,3 @@ if (rootElement) {
 } else {
   console.error('Could not find root element to mount the application.');
 }
-
-registerServiceWorker();
